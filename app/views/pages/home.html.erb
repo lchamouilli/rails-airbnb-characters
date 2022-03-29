@@ -1,8 +1,26 @@
-<div class="container">
   <div class="banner-home d-flex justify-content-center align-items-center">
     <div class="d-flex-column">
       <h1>Rental your Hero</h1>
       <p><%= link_to "Discover", "#", class:"btn btn-warning"%></p>
     </div>
   </div>
-</div>
+<div class="container">
+    <% @characters.each do |character| %>
+      <div class="card">
+      <div class="card-image">
+        <%= image_tag "https://source.unsplash.com/random", alt: "", width: 220, height:250 %>
+      </div>
+      <div class="card-infos">
+        <ul class= "info-list">
+          <li><%=character.nickname%></li>
+          <li><%=character.average_rating%></li>
+          <li><%=character.description%></li>
+          <li><%=character.price_hour%></li>
+        </ul>
+      </div>
+      <div class="arrow-bottom-right">
+          <p>fleche</p>
+      </div>
+      </div>
+    <% end %>
+  </div>

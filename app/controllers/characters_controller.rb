@@ -14,9 +14,11 @@ class CharactersController < ApplicationController
 
   def create
     @character = Character.new(character_params)
-    @character.save
-
-    redirect_to character_path(@character)
+    if @character.save
+      redirect_to character_path(@character)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -24,10 +26,12 @@ class CharactersController < ApplicationController
 
   def update
     @character.update(params[:character])
+    redirect_to character_path(@character)
   end
 
   def destroy
     @character.destroy
+    redirect_to characters_path
   end
 
   private
@@ -39,6 +43,5 @@ class CharactersController < ApplicationController
   def character_params
     params.require(:characters).permit(:nickname, :description, :average_rating, :price_hour)
   end
-
 
 end

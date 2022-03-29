@@ -1,2 +1,44 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-around;
+
+
+}
+
+.card {
+  width: 260px;
+  height: 370px;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+}
+
+.card-infos {
+  margin-top: 5px;
+}
+
+.info-list {
+  padding: 0px;
+}
+
+.info-list li {
+  list-style: none;
+  font-size: 10px;
+}
+
+
+.arrow-bottom-right p {
+  display: flex;
+  justify-content: flex-end;
+}

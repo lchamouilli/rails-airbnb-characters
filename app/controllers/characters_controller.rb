@@ -2,7 +2,7 @@ class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy]
 
   def index
-    @characters = characters.all
+    @characters = Character.all
   end
 
   def show
@@ -15,6 +15,8 @@ class CharactersController < ApplicationController
   def create
     @character = Character.new(character_params)
     @character.save
+
+    redirect_to character_path(@character)
   end
 
   def edit
@@ -34,7 +36,7 @@ class CharactersController < ApplicationController
     @character = Character.find(params[:id])
   end
 
-  def characters_params
+  def character_params
     params.require(:characters).permit(:nickname, :description, :average_rating, :price_hour)
   end
 

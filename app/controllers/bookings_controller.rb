@@ -6,13 +6,14 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(params[:booking])
+    @booking = Booking.new(bookin_params)
     @character = Character.find(params[:character_id])
-    @user = ## current_user (voir cours ce matin)
     @booking.character = @character
-    @booking.save
-
-    redirect_to root_path
+    if @booking.save
+      redirect_to root_path
+    else
+      render 'characters/show'
+    end
   end
 
   private
@@ -20,5 +21,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:title, :start_time, :end_time)
   end
-
 end

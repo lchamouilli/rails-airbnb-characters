@@ -1,0 +1,9 @@
+<h1>Take a rendez-vous with <%= @character.nickname%> </h1>
+
+
+<%= simple_form_for [ @character, @booking ] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :start_time %>
+  <%= f.input :end_time %>
+  <%= f.submit "Submit booking", class: "btn btn-primary" %>
+<% end %>

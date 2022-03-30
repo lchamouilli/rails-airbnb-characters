@@ -25,7 +25,7 @@ class CharactersController < ApplicationController
   end
 
   def update
-    @character.update(params[:character])
+    @character.update(character_params)
     redirect_to character_path(@character)
   end
 
@@ -41,7 +41,7 @@ class CharactersController < ApplicationController
   end
 
   def character_params
-    params.require(:characters).permit(:nickname, :description, :average_rating, :price_hour)
+    params.require(:character).permit(:nickname, :description, :average_rating, :price_hour, :photo)
   end
 
 end

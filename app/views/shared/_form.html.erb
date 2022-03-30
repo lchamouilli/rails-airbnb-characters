@@ -4,6 +4,7 @@
   <%= f.input :description%>
   <%= f.input :price_hour%>
   <%= f.input :average_rating, input_html: {value: 0} %>
-  <%= f.submit "Create"%>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Submit"%>
   <%end%>
 </div>

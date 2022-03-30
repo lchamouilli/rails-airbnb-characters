@@ -5,22 +5,26 @@
     </div>
   </div>
 <div class="container">
-    <% @characters.each do |character| %>
-      <div class="card">
+  <% @characters.each do |character| %>
+    <div class="card">
       <div class="card-image">
-        <%= image_tag "https://source.unsplash.com/random", alt: "", width: 220, height:250 %>
+        <%= link_to character_path(character) do %>
+        <%= cl_image_tag character.photo.key, width: 220, height:250 %>
+        <% end %>
       </div>
       <div class="card-infos">
         <ul class= "info-list">
           <li><%=character.nickname%></li>
-          <li><%=character.average_rating%></li>
+          <li><%=character.average_rating%>/5</li>
           <li><%=character.description%></li>
-          <li><%=character.price_hour%></li>
+          <li><%=character.price_hour%>€/hour</li>
         </ul>
+          <div class="arrow-bottom-right">
+              <%= link_to character_path(character) do %>
+                <%= image_tag("right-arrow.png", class: "arrow-image") %>
+              <% end %>
+          </div>
       </div>
-      <div class="arrow-bottom-right">
-          <p>fleche</p>
-      </div>
-      </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
+</div>

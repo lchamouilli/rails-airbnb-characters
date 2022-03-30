@@ -6,7 +6,6 @@ class CharactersController < ApplicationController
   end
 
   def show
-    @character = Character.find(params[:character_id])
     @booking = Booking.new
   end
 

@@ -31,15 +31,26 @@
 
 .info-list {
   padding: 0px;
+  max-height: 10px;
 }
 
 .info-list li {
   list-style: none;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 
-i {
-  display: flex;
+.arrow-bottom-right {
   justify-content: flex-end;
+  display: flex;
+  position: relative;
+  top: 44px;
+}
+.arrow-image {
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  margin-bottom: 5px;
+  z-index: 1;
+
 }

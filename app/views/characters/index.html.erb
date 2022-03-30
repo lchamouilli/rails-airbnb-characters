@@ -1,12 +1,11 @@
-
-
-
 <div class="container">
   <% @characters.each do |character| %>
     <div class="card">
       <div class="card-image">
         <%= link_to character_path(character) do %>
-        <%= cl_image_tag character.photo.key, width: 220, height:250 %>
+          <% if character.photo.attached? %>
+            <%= cl_image_tag character.photo.key, width: 220, height:250 %>
+          <%end%>
         <% end %>
       </div>
       <div class="card-infos">

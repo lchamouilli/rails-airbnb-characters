@@ -2,7 +2,7 @@
   <div class="d-flex align-items-center mt-5 p-5 w-100 bg-dark">
     <div>
     <%if @character.photo.attached? %>
-      <%= cl_image_tag @character.photo.key, height: 400, width: 400, crop: :fill%>
+      <%= image_tag 'cartman.png', height: 400, width: 400, crop: :fill%>
     <% end %>
     </div>
     <div class="ms-5">

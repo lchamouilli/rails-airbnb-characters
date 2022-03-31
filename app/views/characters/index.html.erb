@@ -14,6 +14,9 @@
           <li><%=character.average_rating%>/5</li>
           <li><%=character.description%></li>
           <li><%=character.price_hour%>€/hour</li>
+          <%character.skills.each |skill| do%>
+          <li><%= skill[0] skill[1] skill[2] skill[3] %></li>
+          <%end%>
         </ul>
           <div class="arrow-bottom-right">
               <%= link_to character_path(character) do %>

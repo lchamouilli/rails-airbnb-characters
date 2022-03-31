@@ -1,32 +1,23 @@
   <div class="banner-home d-flex justify-content-center align-items-center">
     <div class="d-flex-column">
       <h1>Rental your Hero</h1>
-        <p><%= link_to "Discover", characters_path, class:"btn btn-warning"%></p>
+        <p><%= link_to "Réserver maintenant", characters_path, class:"btn btn-warning"%></p>
     </div>
   </div>
-<div class="container">
-  <% @characters.each do |character| %>
-    <div class="card">
-      <div class="card-image">
-        <%= link_to character_path(character) do %>
-          <% if character.photo.attached? %>
-            <%= cl_image_tag character.photo.key, width: 220, height:250%>
-          <%end%>
-        <%end%>
-      </div>
-      <div class="card-infos">
-        <ul class= "info-list">
-          <li><%=character.nickname%></li>
-          <li><%=character.average_rating%>/5</li>
-          <li><%=character.description%></li>
-          <li><%=character.price_hour%>€/hour</li>
-        </ul>
-          <div class="arrow-bottom-right">
-              <%= link_to character_path(character) do %>
-                <%= image_tag("right-arrow.png", class: "arrow-image") %>
-              <% end %>
-          </div>
-      </div>
-    </div>
-  <% end %>
+<div class="home-description">
+  <div>
+    <h2>Do you want to book your favorite hero ?</h2>
+    <h3> You are at the good place</h3>
+    <p>With HeroRental, you can book your favorit hero for different events</p>
+    <ul>
+      <li>Wedding</li>
+      <li>Anniversary</li>
+      <li>Chill moment</li>
+      <li>EVG / EVJF</li>
+      <li>Conference</li>
+      <li>etc...</li>
+      <li><%= link_to "Book now", characters_path, class:"btn btn-warning"%></li>
+    </ul>
+
+  </div>
 </div>

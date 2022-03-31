@@ -11,7 +11,7 @@
 
 .card {
   width: 260px;
-  height: 380px;
+  height: 400px;
   margin-top: 15px;
   padding: 10px;
   border-radius: 4px;
@@ -37,10 +37,10 @@
 
 .info-list li {
   list-style: none;
+  margin-bottom: 2px;
   font-size: 11px;
   font-weight: bold;
 }
-
 
 .arrow-bottom-right {
   justify-content: flex-end;
@@ -56,6 +56,13 @@
   z-index: 1;
 
 }
+
+.skills {
+  font-size: 8px;
+  border: solid 1px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 4px;
 
 img {
   object-fit: cover;

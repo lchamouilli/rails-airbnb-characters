@@ -44,6 +44,9 @@ gem 'simple_form', github: 'heartcombo/simple_form'
 #gem cloudinary
 gem 'cloudinary', '~> 1.16.0'
 
+#gem open-uri
+gem 'open-uri'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

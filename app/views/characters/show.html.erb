@@ -10,8 +10,9 @@
       <p><%= @character.description%></p>
       <p><%= @character.average_rating%>/5</p>
       <p><%= @character.price_hour%> €/hour</p>
-      <%= link_to "Booked", "#", class:"btn btn-lg btn-warning"%>
+      <%= link_to "Booked", new_character_booking_path(@character), class:"btn btn-lg btn-warning"%>
       <%= link_to "Edit", edit_character_path(@character), class:"btn btn-lg btn-primary"%>
+      <%= link_to "Back to list", characters_path, class:"btn btn-lg btn-primary"%>
     </div>
   </div>
 </div>

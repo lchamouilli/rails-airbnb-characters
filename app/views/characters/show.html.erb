@@ -1,5 +1,5 @@
 <div class="container d-flex justify-content-center">
-  <div class="d-flex align-items-center mt-5 p-5 w-100 bg-dark">
+  <div class="show-class d-flex align-items-center mt-5 p-5 w-100 bg-white rounded shadow-sm">
     <div>
     <%if @character.photo.attached? %>
       <%= cl_image_tag @character.photo.key, height: 400, width: 400, crop: :fill%>

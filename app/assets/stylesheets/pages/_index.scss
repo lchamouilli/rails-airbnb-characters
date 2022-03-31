@@ -11,18 +11,19 @@
 
 .card {
   width: 260px;
-  height: 370px;
+  height: 380px;
   margin-top: 15px;
   padding: 10px;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  background-color: rgb(236, 232, 232);
+  background-color: white;
 
 }
 
 .card-image {
   display: flex;
   justify-content: center;
+
 }
 
 .card-infos {
@@ -45,13 +46,18 @@
   justify-content: flex-end;
   display: flex;
   position: relative;
-  top: 44px;
+  top: 43px;
 }
 .arrow-image {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   transform: rotate(45deg);
   margin-bottom: 5px;
   z-index: 1;
 
+}
+
+img {
+  object-fit: cover;
+  object-position: top;
 }

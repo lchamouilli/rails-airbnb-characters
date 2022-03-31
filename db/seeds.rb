@@ -20,7 +20,8 @@ puts "Start create Seed"
 
 #------- Images------#
 
-img1 = URI.open('https://res.cloudinary.com/dawghi0op/image/upload/v1648636333/development/1r513jnil5348dud7p4zik4sq04l.png', "User-Agent" => "Ruby/#{RUBY_VERSION}")
+img1 = URI.open('https://res.cloudinary.com/dawghi0op/image/upload/v1648636333/development/1r513jnil5348dud7p4zik4sq04l.png', "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36
+")
 
 puts "OK character_1"
 

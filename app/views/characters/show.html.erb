@@ -1,15 +1,27 @@
 <div class="container d-flex justify-content-center">
-  <div class="show-class d-flex align-items-center mt-5 p-5 w-100 bg-white rounded shadow-sm">
+  <div class="d-flex align-items-center mt-5 p-5 w-100 bg-white rounded shadow-sm">
     <div>
     <%if @character.photo.attached? %>
       <%= cl_image_tag @character.photo.key, height: 400, width: 400, crop: :fill%>
     <%end%>
     </div>
     <div class="ms-5">
-      <h1><%= @character.nickname%></h1>
-      <p><%= @character.description%></p>
-      <p><%= @character.average_rating%>/5</p>
-      <p><%= @character.price_hour%> €/hour</p>
+      <h1 class="color-orange"><%= @character.nickname%></h1>
+      <p>🔎 <%= @character.description%></p>
+      <% if @character.average_rating == 5 %>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <% elsif @character.average_rating == 4 %>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <% elsif @character.average_rating == 3 %>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <% elsif @character.average_rating == 2 %>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <% elsif @character.average_rating == 1 %>
+              <i class="fa-solid fa-star"></i>
+            <% else %>
+              <i class="fa-solid fa-face-angry"></i>
+      <% end %>
+      <p>💸 <%= @character.price_hour%> €</p>
       <%= link_to "Retour", characters_path, class:"bouton_retour"%>
       <%= link_to "Editer", edit_character_path(@character), class:"btn btn-lg btn-primary"%>
       <%= link_to "Réserver", new_character_booking_path(@character), class:"bouton_reserver"%>

@@ -20,7 +20,7 @@ puts "Start create Seed"
 
 #------- Images------#
 
-img1 = URI.open('https://res.cloudinary.com/dawghi0op/image/upload/v1648636333/development/1r513jnil5348dud7p4zik4sq04l.png')
+img1 = URI.open('https://res.cloudinary.com/dawghi0op/image/upload/v1648636333/development/1r513jnil5348dud7p4zik4sq04l.png', "User-Agent" => "Ruby/#{RUBY_VERSION}")
 
 puts "OK character_1"
 

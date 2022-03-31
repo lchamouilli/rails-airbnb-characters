@@ -15,6 +15,9 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
+        <li class="d-flex align-items-center nav-item active">
+          <%= link_to "Créer votre Héros", new_character_path%>
+        </li>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <%= image_tag "stan_lee.jpeg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

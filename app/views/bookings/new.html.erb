@@ -1,9 +1,18 @@
-<h1>Take a rendez-vous with <%= @character.nickname%> </h1>
+<h1 class="text-center mt-5  border border-4 ">Prendre rendez-vous avec <%= @character.nickname%> </h1>
 
-
-<%= simple_form_for [ @character, @booking ] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :start_time %>
-  <%= f.input :end_time %>
-  <%= f.submit "Submit booking", class: "btn btn-primary" %>
-<% end %>
+<div class="booking container d-flex justify-content-space-between p-2 m-5 pt-5 shadow-sm p-3 mb-5 bg-white rounded">
+  <div>
+      <%if @character.photo.attached? %>
+        <%= cl_image_tag @character.photo.key, height: 400, width: 400, crop: :fill%>
+      <%end%>
+  </div>
+  <div class="col-sm-12 w-50 p-3">
+    <%= simple_form_for [ @character, @booking ] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :start_time %>
+      <%= f.input :end_time %>
+      <%= f.submit "Réserve ton héro", class: "btn btn-lg btn-warning m-5 .text-center" %>
+    <% end %>
+     <%= link_to "Retour", character_path(@character), class:"btn btn-lg btn-secondary m-5 .text-center"%>
+  </div>
+</div>

@@ -15,11 +15,15 @@ user2 = User.create!(first_name: "Rebecca", last_name: "Biberian", email: "test@
 user3 = User.create!(first_name: "Paul", last_name: "James", email: "test@test.org", password: "123456", password_confirmation:"123456")
 user4 = User.create!(first_name: "Lionel", last_name: "Chamouilli", email: "test@test.eu", password: "123456", password_confirmation:"123456")
 
+# user_agent = "User-Agent" => "Ruby/#{RUBY_VERSION}"
 puts "Start create Seed"
 
 #------- Images------#
 
 img1 = URI.open('https://res.cloudinary.com/dawghi0op/image/upload/v1648636333/development/1r513jnil5348dud7p4zik4sq04l.png')
+
+puts "OK character_1"
+
 img2 = URI.open('https://res.cloudinary.com/dawghi0op/image/upload/v1648664605/development/batman_jmemcx.png')
 img3 = URI.open('https://res.cloudinary.com/dawghi0op/image/upload/v1648664657/development/tintin_wxicpx.webp')
 img4 = URI.open('https://res.cloudinary.com/dawghi0op/image/upload/v1648717632/development/d9f8f0b9643637276b965f167ac673e4_skrnop.jpg')

@@ -2,12 +2,113 @@
   <h1>DASHBOARD</h1>
   <div class="infos">
     <h2>Infos</h2>
+  </div>
 
+  <div class="row">
+
+    <div class="col-12 col-md-6">
+      <div class="pending">
+        <h2>Mes pendings</h2>
+        <% @mybookings.each do |character| %>
+
+          <div class="card">
+            <div class="card-image">
+              <%= link_to character_path(character) do %>
+                <% if character.photo.attached? %>
+                  <%= cl_image_tag character.photo.key, width: 235, height:250 %>
+                <%end%>
+              <% end %>
+            </div>
+            <div class="card-infos">
+              <ul class= "info-list">
+                <li><h3><%=character.nickname%></h3></li>
+                <li>
+                  <% if character.average_rating == 5 %>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <% elsif character.average_rating == 4 %>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <% elsif character.average_rating == 3 %>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <% elsif character.average_rating == 2 %>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <% elsif character.average_rating == 1 %>
+                    <i class="fa-solid fa-star"></i>
+                  <% else %>
+                    <i class="fa-solid fa-face-angry"></i>
+                  <% end %>
+                </li>
+                <li>🔎 <%=character.description%></li>
+                <li>💸 <%=character.price_hour%> €</li>
+                <li>
+                  <% character.skills.each do |skill|%>
+                  <span class="skills"><%= skill %></span>
+                  <% end %>
+                </li>
+              </ul>
+                <div class="arrow-bottom-right">
+                    <%= link_to character_path(character) do %>
+                      <%= image_tag("right-arrow.png", class: "arrow-image") %>
+                    <% end %>
+                </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="pending">
+        <h2>Mes pendings</h2>
+        <% @mybookings.each do |character| %>
+
+          <div class="card">
+            <div class="card-image">
+              <%= link_to character_path(character) do %>
+                <% if character.photo.attached? %>
+                  <%= cl_image_tag character.photo.key, width: 235, height:250 %>
+                <%end%>
+              <% end %>
+            </div>
+            <div class="card-infos">
+              <ul class= "info-list">
+                <li><h3><%=character.nickname%></h3></li>
+                <li>
+                  <% if character.average_rating == 5 %>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <% elsif character.average_rating == 4 %>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <% elsif character.average_rating == 3 %>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <% elsif character.average_rating == 2 %>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <% elsif character.average_rating == 1 %>
+                    <i class="fa-solid fa-star"></i>
+                  <% else %>
+                    <i class="fa-solid fa-face-angry"></i>
+                  <% end %>
+                </li>
+                <li>🔎 <%=character.description%></li>
+                <li>💸 <%=character.price_hour%> €</li>
+                <li>
+                  <% character.skills.each do |skill|%>
+                  <span class="skills"><%= skill %></span>
+                  <% end %>
+                </li>
+              </ul>
+                <div class="arrow-bottom-right">
+                    <%= link_to character_path(character) do %>
+                      <%= image_tag("right-arrow.png", class: "arrow-image") %>
+                    <% end %>
+                </div>
+            </div>
+          </div>
+
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="persos à louer">
-    <h2>Mes personnages à louer</h2>
-  </div>
-  <div class="rencontres">
-    <h2>Mes rencontres</h2>
-  </div>
+
+
+
+
+
 </div>

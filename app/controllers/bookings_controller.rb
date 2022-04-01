@@ -9,8 +9,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.character = @character
     if @booking.save
-      redirect_to root_path
+      redirect_to characters_path
     else
+      flash.alert = "Réservation annulée"
       render 'characters/show'
     end
   end
@@ -22,6 +23,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:title, :start_time, :end_time, :total_price)
+    params.require(:booking).permit(:title, :start_time, :end_time, :total_price, :available)
   end
 end

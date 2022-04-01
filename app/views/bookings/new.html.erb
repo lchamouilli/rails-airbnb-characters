@@ -8,8 +8,8 @@
   </div>
   <div class="col-sm-12 w-50 p-3">
     <%= simple_form_for [ @character, @booking ] do |f| %>
-      <%= f.input :title %>
-      <%= f.input :start_time %>
+      <%# <%= f.input :title %>
+      <%= f.input :start_time %> 
       <%= f.input :end_time %>
       <%= f.submit "Réserve ton héros", class: "btn btn-lg btn-warning m-5 .text-center" %>
     <% end %>

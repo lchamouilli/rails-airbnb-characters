@@ -1,17 +1,15 @@
-<div class="container_dash">
+<div class="container_dash text-center">
   <h1>DASHBOARD</h1>
-  <div class="infos">
-    <h1><%= current_user.first_name %></h1>
-    <h2><%= current_user.last_name %></h2>
-    <h2>Infos</h2>
+  <div class="infos m-5">
+    <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
   </div>
 
   <div class="col-12 justify-content-center">
     <div class="pending">
-      <h2 class="text-center">Mes demandes en attentes de confirmation :</h2>
+    <h2 class="text-center">Mes demandes en attentes de confirmation :</h2>
       <% @myBookingDemands.each do |character| %>
         <% if character.bookings[0].available? %>
-        <div class="card">
+        <div class="card d-inline-block">
           <div class="card-image">
               <% if character.photo.attached? %>
                 <%= cl_image_tag character.photo.key, width: 235, height:250 %>
@@ -56,11 +54,11 @@
   </div>
 
   <div class="row">
-    <div class="col-12 col-md-6 d-flex justify-content-center">
+    <div class="">
       <div class="pending">
         <h2>Mes Héros :</h2>
         <% @mybookings.each do |character| %>
-          <div class="card">
+          <div class="card d-inline-block">
             <div class="card-image">
               <%= link_to character_path(character) do %>
                 <% if character.photo.attached? %>
@@ -104,12 +102,12 @@
         <% end %>
       </div>
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 justify-content-center">
       <div class="pending">
         <h2>Mes demandes de booking :</h2>
         <% @myPendingBookings.each do |booking| %>
           <% if booking.available? %>
-          <div class="card">
+          <div class="card d-inline-block">
             <div class="card-image">
                 <% if booking.character.photo.attached? %>
                   <%= cl_image_tag booking.character.photo.key, width: 235, height:250 %>

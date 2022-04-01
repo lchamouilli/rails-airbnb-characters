@@ -1,4 +1,4 @@
-<div class="container d-flex justify-content-center">
+<div class="container d-flex justify-content-center container-show">
   <div class="d-flex align-items-center mt-5 p-5 w-100 bg-white rounded shadow-sm">
     <div>
     <%if @character.photo.attached? %>
@@ -22,9 +22,15 @@
               <i class="fa-solid fa-face-angry"></i>
       <% end %>
       <p>💸 <%= @character.price_hour%> €</p>
-      <%= link_to "Retour", characters_path, class:"bouton_retour"%>
-      <%= link_to "Editer", edit_character_path(@character), class:"btn btn-lg btn-primary"%>
+      <p>
+        <% @character.skills.each do |skill|%>
+          <span class="skills"><%= skill %></span>
+        <% end %>
+      </p>
+      <br>
       <%= link_to "Réserver", new_character_booking_path(@character), class:"bouton_reserver"%>
+      <%= link_to "Editer", edit_character_path(@character), class:"bouton_editer"%>
+
     </div>
   </div>
 </div>

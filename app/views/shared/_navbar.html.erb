@@ -15,12 +15,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <li class="d-flex align-items-center nav-item active">
+        <li class="d-flex d-none align-items-center nav-item active">
           <%= link_to "Créer votre Héros", new_character_path%>
-        </li>
-        <li class="d-flex align-items-center nav-item active">
-          <% @user = current_user %>
-          <span class="orange-color"><%= link_to @user.first_name, dashboard_path%></span>
         </li>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">

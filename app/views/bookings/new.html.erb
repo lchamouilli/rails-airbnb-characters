@@ -1,4 +1,4 @@
-<h1 class="text-center mt-5  border border-4 ">Prendre rendez-vous avec <%= @character.nickname%> </h1>
+<h1 class="text-center mt-5  border border-4">Prendre rendez-vous avec <span class="color-orange"><%= @character.nickname%></span></h1>
 
 <div class="booking container d-flex justify-content-space-between p-2 m-5 pt-5 shadow-sm p-3 mb-5 bg-white rounded">
   <div>
@@ -8,11 +8,11 @@
   </div>
   <div class="col-sm-12 w-50 p-3">
     <%= simple_form_for [ @character, @booking ] do |f| %>
-      <%# <%= f.input :title %>
-      <%= f.input :start_time %> 
-      <%= f.input :end_time %>
-      <%= f.submit "Réserve ton héros", class: "btn btn-lg btn-warning m-5 .text-center" %>
+      <%= f.input :start_time, label: "Date de début" %>
+      <%= f.input :end_time, label: "Date de fin" %>
+      <p>Prix total : <%= @character.price_hour%> € par jour</p>
+      <%= f.submit "Réserve ton héros", class: "bouton_reserver"%>
     <% end %>
-     <%= link_to "Retour", character_path(@character), class:"btn btn-lg btn-secondary m-5 .text-center"%>
+  <%= link_to "Retour", character_path(@character), class:"btn btn-lg btn-secondary mt-5 .text-center"%>
   </div>
 </div>

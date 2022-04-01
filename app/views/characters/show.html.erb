@@ -27,7 +27,9 @@
           <span class="skills"><%= skill %></span>
         <% end %>
       </p>
-      <br>
+      <div data-controller="donut" data-action="click->donut#playSound">
+        <p><%=  image_tag "donuts.png", alt: "donut", width: 40, height: 40 %></p>
+      </div>
       <%= link_to "Réserver", new_character_booking_path(@character), class:"bouton_reserver"%>
       <%= link_to "Editer", edit_character_path(@character), class:"bouton_editer"%>
 

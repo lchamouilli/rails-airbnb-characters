@@ -53,73 +53,73 @@ skills3 = ["birthday", "conference", "chill", "drive licence"]
 skills4 = ["chill", "discussion", "drive licence", "fun"]
 
 
-character_1 = Character.create!(nickname: 'Homer Simpson', average_rating: 0, description: 'Célébre habitant de Springfield', price_hour: 50, user: user1, skills: skills1)
+character_1 = Character.create!(nickname: 'Homer Simpson', average_rating: 4.5, description: 'Célébre habitant de Springfield', price_hour: 50, user: user1, skills: skills1)
 character_1.photo.attach(io: img1, filename: "Homer Simpson", content_type: 'image/png')
 
-character_2 = Character.create!(nickname: 'Batman', average_rating: 0, description: 'Super-héros de Gotham City ', price_hour: 100, user: user1, skills: skills1)
+character_2 = Character.create!(nickname: 'Batman', average_rating: 3.8, description: 'Super-héros de Gotham City ', price_hour: 100, user: user1, skills: skills1)
 character_2.photo.attach(io: img2, filename: "Batman", content_type: 'image/png')
 
-character_3 = Character.create!(nickname: 'Tintin', average_rating: 0, description: 'Célébre journaliste', price_hour: 25, user: user1, skills: skills1)
+character_3 = Character.create!(nickname: 'Tintin', average_rating: 2.3, description: 'Célébre journaliste', price_hour: 25, user: user1, skills: skills1)
 character_3.photo.attach(io: img3, filename: "Tintin", content_type: 'image/webp')
 
-character_4 = Character.create!(nickname: 'Kenny', average_rating: 0, description: 'Garçon de la petite ville de South-park', price_hour: 50, user: user1, skills: skills1)
+character_4 = Character.create!(nickname: 'Kenny', average_rating: 5, description: 'Garçon de la petite ville de South-park', price_hour: 50, user: user1, skills: skills1)
 character_4.photo.attach(io: img4, filename: "Kenny", content_type: 'image/png')
 
-character_5 = Character.create!(nickname: 'Garfield', average_rating: 0, description: 'Le meilleur gros chat roux, flemmard, et fan de Lasagne', price_hour: 5, user: user1, skills: skills1)
+character_5 = Character.create!(nickname: 'Garfield', average_rating: 4.7, description: 'Le meilleur gros chat roux, flemmard, et fan de Lasagne', price_hour: 5, user: user1, skills: skills1)
 character_5.photo.attach(io: img5, filename: "Garfield", content_type: 'image/png')
 
 
 puts "5/20"
 
 
-character_6 = Character.create!(nickname: 'Tank girl', average_rating: 0, description: 'Rebecca Buck parcourt une Australie post-apocalyptique en compagnie d’un kangourou mutant.', price_hour: 200, user: user2, skills: skills2)
+character_6 = Character.create!(nickname: 'Tank girl', average_rating: 2.2, description: 'Rebecca Buck parcourt une Australie post-apocalyptique en compagnie d’un kangourou mutant.', price_hour: 200, user: user2, skills: skills2)
 character_6.photo.attach(io: img6, filename: "Tank girl", content_type: 'image/jpg')
 
-character_7 = Character.create!(nickname: 'Daria morgendorfer', average_rating: 0, description: 'une lycéenne avec un humour sarcastique', price_hour: 60, user: user2, skills: skills2)
+character_7 = Character.create!(nickname: 'Daria morgendorfer', average_rating: 3.2, description: 'une lycéenne avec un humour sarcastique', price_hour: 60, user: user2, skills: skills2)
 character_7.photo.attach(io: img7, filename: "Daria morgendorfer", content_type: 'image/png')
 
-character_8 = Character.create!(nickname: 'Poison Ivy', average_rating: 0, description: 'Célébre méchante de Gotham City qui controle la nature', price_hour: 80, user: user2, skills: skills2)
+character_8 = Character.create!(nickname: 'Poison Ivy', average_rating: 2.8, description: 'Célébre méchante de Gotham City qui controle la nature', price_hour: 80, user: user2, skills: skills2)
 character_8.photo.attach(io: img8, filename: "Poison Ivy'", content_type: 'image/jpg')
 
-character_9 = Character.create!(nickname: 'Mr. Esclave', average_rating: 0, description: 'Sadomasochiste', price_hour: 2, user: user2, skills: skills2)
+character_9 = Character.create!(nickname: 'Mr. Esclave', average_rating: 4.2, description: 'Sadomasochiste', price_hour: 2, user: user2, skills: skills2)
 character_9.photo.attach(io: img9, filename: "Mr. Esclave", content_type: 'image/png')
 
-character_10 = Character.create!(nickname: 'Catwoman', average_rating: 0, description: 'Voleuse célébre de Gotham City', price_hour: 500, user: user2, skills: skills2)
+character_10 = Character.create!(nickname: 'Catwoman', average_rating: 3.7, description: 'Voleuse célébre de Gotham City', price_hour: 500, user: user2, skills: skills2)
 character_10.photo.attach(io: img10, filename: "Catwoman", content_type: 'image/png')
 
 puts "10/20"
 
 
-character_11 = Character.create!(nickname: 'Chat de Cheshire', average_rating: 0, description: 'Chat malicieux du pays des merveilles', price_hour: 600, user: user3, skills: skills3)
+character_11 = Character.create!(nickname: 'Chat de Cheshire', average_rating: 1.7, description: 'Chat malicieux du pays des merveilles', price_hour: 600, user: user3, skills: skills3)
 character_11.photo.attach(io: img11, filename: "Chat de Cheshire", content_type: 'image/png')
 
-character_12 = Character.create!(nickname: 'Obi-wan Kenobi', average_rating: 0, description: 'Grand maitre Jedi', price_hour: 199, user: user3, skills: skills3)
+character_12 = Character.create!(nickname: 'Obi-wan Kenobi', average_rating: 4.6, description: 'Grand maitre Jedi', price_hour: 199, user: user3, skills: skills3)
 character_12.photo.attach(io: img12, filename: "Obi-wan Kenobi", content_type: 'image/png')
 
-character_13 = Character.create!(nickname: 'Thor', average_rating: 0, description: 'Dieux du tonnerre, prince de Asgard et membre des Avengers', price_hour: 100, user: user3, skills: skills3)
+character_13 = Character.create!(nickname: 'Thor', average_rating: 4.1, description: 'Dieux du tonnerre, prince de Asgard et membre des Avengers', price_hour: 100, user: user3, skills: skills3)
 character_13.photo.attach(io: img13, filename: "Thor", content_type: 'image/png')
 
-character_14 = Character.create!(nickname: 'Marty Mcfly', average_rating: 0, description: 'Meilleur amie du Doc, il voyage dans le temps grâce à la Delorean', price_hour: 999, user: user3, skills: skills3)
+character_14 = Character.create!(nickname: 'Marty Mcfly', average_rating: 4.2, description: 'Meilleur amie du Doc, il voyage dans le temps grâce à la Delorean', price_hour: 999, user: user3, skills: skills3)
 character_14.photo.attach(io: img14, filename: 'Marty Mcfly', content_type: 'image/png')
 
-character_15 = Character.create!(nickname: 'Dr Peter Venkman', average_rating: 0, description: 'Docteur et membres des célébres Ghostbusters', price_hour: 30, user: user3, skills: skills3)
+character_15 = Character.create!(nickname: 'Dr Peter Venkman', average_rating: 3.2, description: 'Docteur et membres des célébres Ghostbusters', price_hour: 30, user: user3, skills: skills3)
 character_15.photo.attach(io: img15, filename: 'Dr Peter Venkman', content_type: 'image/png')
 
 puts "15/20"
 
-character_16 = Character.create!(nickname: 'Rick', average_rating: 0, description: 'Rick étant un inventeur extrêmement doué', price_hour: 80, user: user4, skills: skills4)
+character_16 = Character.create!(nickname: 'Rick', average_rating: 3.9, description: 'Rick étant un inventeur extrêmement doué', price_hour: 80, user: user4, skills: skills4)
 character_16.photo.attach(io: img16, filename: "Rick", content_type: 'image/png')
 
-character_17 = Character.create!(nickname: 'Hall', average_rating: 0, description: 'Le père le plus infantile qui soit', price_hour: 70, user: user4, skills: skills4)
+character_17 = Character.create!(nickname: 'Hall', average_rating: 4.1, description: 'Le père le plus infantile qui soit', price_hour: 70, user: user4, skills: skills4)
 character_17.photo.attach(io: img17, filename: "Hall", content_type: 'image/png')
 
-character_18 = Character.create!(nickname: 'Phoebe', average_rating: 0, description: 'Fille excentrique et attachante', price_hour: 70, user: user4, skills: skills4)
+character_18 = Character.create!(nickname: 'Phoebe', average_rating: 3.2, description: 'Fille excentrique et attachante', price_hour: 70, user: user4, skills: skills4)
 character_18.photo.attach(io: img18, filename: "Phoebe", content_type: 'image/png')
 
-character_19 = Character.create!(nickname: 'Charles Boyle', average_rating: 0, description: 'Officier peu charismatique de la brigade Brooklyn 99', price_hour: 80, user: user4, skills: skills4)
+character_19 = Character.create!(nickname: 'Charles Boyle', average_rating: 2.7, description: 'Officier peu charismatique de la brigade Brooklyn 99', price_hour: 80, user: user4, skills: skills4)
 character_19.photo.attach(io: img19, filename: "Charles Boyle", content_type: 'image/png')
 
-character_20 = Character.create!(nickname: 'Michael', average_rating: 0, description: 'Patron incompétent', price_hour: 75, user: user4, skills: skills4)
+character_20 = Character.create!(nickname: 'Michael', average_rating: 3.9, description: 'Patron incompétent', price_hour: 75, user: user4, skills: skills4)
 character_20.photo.attach(io: img20, filename: "Michael", content_type: 'image/jpg')
 
 puts "Finished"

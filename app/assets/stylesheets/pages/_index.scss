@@ -1,6 +1,15 @@
 // Import page-specific CSS files here.
 @import "home";
 
+
+
+h3 {
+  line-height: 24px;
+  margin-top: 9px;
+  color: #ff5044;
+}
+
+
 .container {
   display: grid;
   grid-gap: 5px;
@@ -11,7 +20,7 @@
 
 .card {
   width: 260px;
-  height: 400px;
+  height: 450px;
   margin-top: 15px;
   padding: 10px;
   border-radius: 4px;
@@ -37,16 +46,16 @@
 
 .info-list li {
   list-style: none;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
   font-size: 11px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .arrow-bottom-right {
   justify-content: flex-end;
   display: flex;
   position: relative;
-  top: 43px;
+  top: 100px;
 }
 .arrow-image {
   width: 35px;
@@ -68,4 +77,12 @@
 img {
   object-fit: cover;
   object-position: top;
+}
+
+.fa-face-angry {
+  color: #c0392b;
+}
+
+.fa-star {
+  color: #f1c40f;
 }

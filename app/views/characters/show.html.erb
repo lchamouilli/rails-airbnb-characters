@@ -28,7 +28,9 @@
         <% end %>
       </p>
       <br>
-      <%= link_to "Réserver", new_character_booking_path(@character), class:"bouton_reserver"%>
+      <% if current_user != @character.user %>
+        <%= link_to "Réserver", new_character_booking_path(@character), class:"bouton_reserver"%>
+      <% end %>
       <%= link_to "Editer", edit_character_path(@character), class:"bouton_editer"%>
 
     </div>

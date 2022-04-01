@@ -8,12 +8,19 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.character = @character
+    @booking.user = current_user
     if @booking.save
       redirect_to characters_path
     else
-      flash.alert = "Réservation annulée"
+      flash.alert = "La reservation s'est mal passé !"
       render 'characters/show'
     end
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(available: false)
+    redirect_to root_path
   end
 
   private

@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :characters do
     resources :bookings, only: [ :new, :create ]
   end
+  get "/dashboard", to: "dashboard#dashboard"
 end
